@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Your Paper Title - Project Page">
-  <meta name="keywords" content="machine learning, deep learning, robotics, AI">
+  <meta name="description" content="Few-shot Learning through Unsupervised Discovery of Diffusion Components - Project Page">
+  <meta name="keywords" content="machine learning, deep learning, few-shot learning, diffusion models, AI">
   
   <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="Your Paper Title">
-  <meta property="og:description" content="Brief description of your paper for social media sharing.">
+  <meta property="og:title" content="Few-shot Learning through Unsupervised Discovery of Diffusion Components">
+  <meta property="og:description" content="Few-shot Learning through Unsupervised Discovery of Diffusion Components">
   <meta property="og:type" content="website">
   
-  <title>Your Paper Title</title>
+  <title>Few-shot Learning through Unsupervised Discovery of Diffusion Components</title>
   
   <!-- Fonts - DM Sans (clean, professional, subtly soft) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,18 +75,6 @@
       margin-bottom: 28px;
       color: var(--color-text);
       letter-spacing: -0.02em;
-    }
-
-    .venue {
-      display: inline-block;
-      background: var(--color-primary);
-      color: white;
-      padding: 6px 18px;
-      border-radius: 6px;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-      margin-bottom: 32px;
     }
 
     /* Authors */
@@ -332,47 +320,6 @@
       color: var(--color-primary);
     }
 
-    /* ========== BibTeX ========== */
-    .bibtex-section {
-      background: var(--color-surface);
-    }
-
-    .bibtex-box {
-      background: var(--color-text);
-      color: #e8e8e8;
-      padding: 24px;
-      border-radius: 10px;
-      font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
-      font-size: 13px;
-      line-height: 1.6;
-      overflow-x: auto;
-      position: relative;
-    }
-
-    .bibtex-box pre {
-      margin: 0;
-      white-space: pre-wrap;
-      word-wrap: break-word;
-    }
-
-    .copy-btn {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background: rgba(255, 255, 255, 0.1);
-      border: none;
-      color: white;
-      padding: 8px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 12px;
-      transition: background 0.2s;
-    }
-
-    .copy-btn:hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
-
     /* ========== Footer ========== */
     footer {
       text-align: center;
@@ -455,40 +402,27 @@
   <!-- ==================== HERO SECTION ==================== -->
   <header class="hero">
     <div class="hero-content">
-      <h1 class="paper-title">Your Amazing Paper Title Goes Here:<br>A Subtitle If You Have One</h1>
-      
-      <div class="venue">Conference Name 2025</div>
+      <h1 class="paper-title">Few-shot Learning through Unsupervised Discovery of Diffusion Components</h1>
       
       <div class="authors">
         <div class="author-list">
-          <span class="author"><a href="https://yourwebsite.com">First Author</a><sup>1</sup>,</span>
-          <span class="author"><a href="#">Second Author</a><sup>1,2</sup>,</span>
-          <span class="author"><a href="#">Third Author</a><sup>2</sup>,</span>
-          <span class="author"><a href="#">Fourth Author</a><sup>1</sup></span>
+          <span class="author"><a href="#">Hanming Ye</a>,</span>
+          <span class="author"><a href="#">Yiding Song</a></span>
         </div>
         
         <div class="affiliations">
-          <span><sup>1</sup>University One</span>
-          <span><sup>2</sup>University Two</span>
+          <span>Harvard University</span>
         </div>
       </div>
       
       <div class="quick-links">
         <a href="#" class="quick-link">
-          <i class="ai ai-arxiv"></i>
-          arXiv
+          <i class="fas fa-file-alt"></i>
+          Paper
         </a>
         <a href="#" class="quick-link">
           <i class="fab fa-github"></i>
           Code
-        </a>
-        <a href="#" class="quick-link">
-          <i class="fas fa-video"></i>
-          Video
-        </a>
-        <a href="#" class="quick-link">
-          <i class="fas fa-database"></i>
-          Data
         </a>
       </div>
     </div>
@@ -648,35 +582,6 @@
     </div>
   </section>
 
-  <!-- ==================== BIBTEX ==================== -->
-  <section class="bibtex-section">
-    <div class="container">
-      <h2 class="section-title">BibTeX</h2>
-      <div class="bibtex-box">
-        <button class="copy-btn" onclick="copyBibtex()">
-          <i class="fas fa-copy"></i> Copy
-        </button>
-        <pre>@inproceedings{authorname2025yourmethod,
-  title     = {Your Amazing Paper Title Goes Here: A Subtitle If You Have One},
-  author    = {Author, First and Author, Second and Author, Third and Author, Fourth},
-  booktitle = {Proceedings of Conference Name},
-  year      = {2025},
-}</pre>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== ACKNOWLEDGEMENTS (Optional) ==================== -->
-  <section class="acknowledgements">
-    <div class="container">
-      <h2 class="section-title">Acknowledgements</h2>
-      <p>
-        We thank [names] for helpful discussions. This work was supported by [funding sources].
-        First Author is supported by [fellowship/grant].
-      </p>
-    </div>
-  </section>
-
   <!-- ==================== FOOTER ==================== -->
   <footer>
     <p>
@@ -686,17 +591,6 @@
   </footer>
 
   <script>
-    function copyBibtex() {
-      const bibtex = document.querySelector('.bibtex-box pre').textContent;
-      navigator.clipboard.writeText(bibtex).then(() => {
-        const btn = document.querySelector('.copy-btn');
-        btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
-        setTimeout(() => {
-          btn.innerHTML = '<i class="fas fa-copy"></i> Copy';
-        }, 2000);
-      });
-    }
-
     // Lazy load videos when they come into view
     document.addEventListener('DOMContentLoaded', function() {
       const videos = document.querySelectorAll('video');

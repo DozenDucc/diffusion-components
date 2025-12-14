@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your Paper Title - Project Page">
+  <meta name="keywords" content="machine learning, deep learning, robotics, AI">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Your Paper Title">
+  <meta property="og:description" content="Brief description of your paper for social media sharing.">
+  <meta property="og:type" content="website">
+  
+  <title>Your Paper Title</title>
+  
+  <!-- Fonts - DM Sans (clean, professional, subtly soft) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  
+  <style>
+    :root {
+      --color-primary: #5B7FFF;
+      --color-primary-dark: #4A6AE5;
+      --color-text: #1a1a2e;
+      --color-text-secondary: #4a4a68;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fc;
+      --color-border: #e8e8f0;
+      --color-accent: #FF6B6B;
+      --font-main: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --max-width: 900px;
+      --max-width-wide: 1100px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-main);
+      color: var(--color-text);
+      background: var(--color-background);
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    /* ========== Hero Section ========== */
+    .hero {
+      padding: 80px 24px 60px;
+      text-align: center;
+      background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-background) 100%);
+    }
+
+    .hero-content {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .paper-title {
+      font-family: var(--font-main);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 28px;
+      color: var(--color-text);
+      letter-spacing: -0.02em;
+    }
+
+    .venue {
+      display: inline-block;
+      background: var(--color-primary);
+      color: white;
+      padding: 6px 18px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      margin-bottom: 32px;
+    }
+
+    /* Authors */
+    .authors {
+      margin-bottom: 12px;
+    }
+
+    .author-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 24px;
+      font-size: 17px;
+    }
+
+    .author-list a {
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .author-list a:hover {
+      color: var(--color-primary-dark);
+      text-decoration: underline;
+    }
+
+    .author sup {
+      font-size: 11px;
+      margin-left: 1px;
+    }
+
+    .affiliations {
+      font-size: 15px;
+      color: var(--color-text-secondary);
+      margin-top: 16px;
+    }
+
+    .affiliations span {
+      margin: 0 12px;
+    }
+
+    /* Quick Links */
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 36px;
+    }
+
+    .quick-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: var(--color-text);
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.2s;
+    }
+
+    .quick-link:hover {
+      background: var(--color-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(91, 127, 255, 0.25);
+    }
+
+    .quick-link i {
+      font-size: 18px;
+    }
+
+    /* ========== Teaser Section ========== */
+    .teaser {
+      padding: 40px 24px 60px;
+      background: var(--color-background);
+    }
+
+    .teaser-content {
+      max-width: var(--max-width-wide);
+      margin: 0 auto;
+    }
+
+    .teaser-video {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .teaser-caption {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 15px;
+      color: var(--color-text-secondary);
+      font-style: italic;
+    }
+
+    /* ========== Section Styles ========== */
+    section {
+      padding: 60px 24px;
+    }
+
+    section:nth-child(even) {
+      background: var(--color-surface);
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .container-wide {
+      max-width: var(--max-width-wide);
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-family: var(--font-main);
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      color: var(--color-text);
+      letter-spacing: -0.01em;
+    }
+
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 28px;
+      background: var(--color-primary);
+      margin-right: 12px;
+      vertical-align: middle;
+      border-radius: 2px;
+    }
+
+    /* ========== Abstract ========== */
+    .abstract p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--color-text-secondary);
+    }
+
+    /* ========== Method Section ========== */
+    .method-figure {
+      margin: 32px 0;
+    }
+
+    .method-figure img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .method-figure figcaption {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 15px;
+      color: var(--color-text-secondary);
+    }
+
+    /* ========== Results Grid ========== */
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .result-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .result-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .result-card video,
+    .result-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .result-card .caption {
+      padding: 16px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text);
+      border-top: 1px solid var(--color-border);
+    }
+
+    /* ========== Comparison Table ========== */
+    .comparison-section {
+      margin-top: 40px;
+    }
+
+    .comparison-header {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: var(--color-text);
+    }
+
+    .comparison-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .comparison-row:last-child {
+      border-bottom: none;
+    }
+
+    .comparison-item {
+      text-align: center;
+    }
+
+    .comparison-item video,
+    .comparison-item img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+
+    .comparison-item .label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text-secondary);
+    }
+
+    .comparison-item .label.ours {
+      color: var(--color-primary);
+    }
+
+    /* ========== BibTeX ========== */
+    .bibtex-section {
+      background: var(--color-surface);
+    }
+
+    .bibtex-box {
+      background: var(--color-text);
+      color: #e8e8e8;
+      padding: 24px;
+      border-radius: 10px;
+      font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+      font-size: 13px;
+      line-height: 1.6;
+      overflow-x: auto;
+      position: relative;
+    }
+
+    .bibtex-box pre {
+      margin: 0;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 12px;
+      transition: background 0.2s;
+    }
+
+    .copy-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* ========== Footer ========== */
+    footer {
+      text-align: center;
+      padding: 40px 24px;
+      background: var(--color-background);
+      border-top: 1px solid var(--color-border);
+    }
+
+    footer p {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+    }
+
+    footer a {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ========== Responsive ========== */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 60px 20px 40px;
+      }
+
+      .author-list {
+        gap: 4px 16px;
+        font-size: 15px;
+      }
+
+      .affiliations span {
+        display: block;
+        margin: 4px 0;
+      }
+
+      .quick-links {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .quick-link {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+      }
+
+      section {
+        padding: 40px 20px;
+      }
+
+      .section-title {
+        font-size: 24px;
+      }
+
+      .results-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .comparison-row {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* ========== Utilities ========== */
+    .text-center {
+      text-align: center;
+    }
+
+    .mt-2 { margin-top: 16px; }
+    .mt-4 { margin-top: 32px; }
+    .mb-2 { margin-bottom: 16px; }
+    .mb-4 { margin-bottom: 32px; }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="paper-title">Your Amazing Paper Title Goes Here:<br>A Subtitle If You Have One</h1>
+      
+      <div class="venue">Conference Name 2025</div>
+      
+      <div class="authors">
+        <div class="author-list">
+          <span class="author"><a href="https://yourwebsite.com">First Author</a><sup>1</sup>,</span>
+          <span class="author"><a href="#">Second Author</a><sup>1,2</sup>,</span>
+          <span class="author"><a href="#">Third Author</a><sup>2</sup>,</span>
+          <span class="author"><a href="#">Fourth Author</a><sup>1</sup></span>
+        </div>
+        
+        <div class="affiliations">
+          <span><sup>1</sup>University One</span>
+          <span><sup>2</sup>University Two</span>
+        </div>
+      </div>
+      
+      <div class="quick-links">
+        <a href="#" class="quick-link">
+          <i class="ai ai-arxiv"></i>
+          arXiv
+        </a>
+        <a href="#" class="quick-link">
+          <i class="fab fa-github"></i>
+          Code
+        </a>
+        <a href="#" class="quick-link">
+          <i class="fas fa-video"></i>
+          Video
+        </a>
+        <a href="#" class="quick-link">
+          <i class="fas fa-database"></i>
+          Data
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== TEASER ==================== -->
+  <section class="teaser">
+    <div class="teaser-content">
+      <!-- Replace with your teaser video or image -->
+      <!-- Option 1: Video (uncomment below) -->
+      <!--
+      <video class="teaser-video" autoplay loop muted playsinline>
+        <source src="static/videos/teaser.mp4" type="video/mp4">
+      </video>
+      -->
+      <!-- Option 2: Image (default placeholder) -->
+      <img class="teaser-video" src="static/images/teaser.svg" alt="Teaser figure">
+      <p class="teaser-caption">
+        <strong>TL;DR:</strong> One sentence summary of your method and what makes it special.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== ABSTRACT ==================== -->
+  <section class="abstract">
+    <div class="container">
+      <h2 class="section-title">Abstract</h2>
+      <p>
+        Your abstract goes here. This should be a concise summary of your paper, typically 150-250 words. 
+        Describe the problem you're solving, your key insight or method, and your main results. 
+        Make it compelling enough that readers want to learn more about your work.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut 
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== METHOD ==================== -->
+  <section class="method">
+    <div class="container-wide">
+      <h2 class="section-title">Method</h2>
+      <p>
+        Brief description of your method. Explain the key components and how they work together.
+        This section should give readers a high-level understanding of your approach.
+      </p>
+      
+      <figure class="method-figure">
+        <!-- Replace with your method figure -->
+        <img src="static/images/method.svg" alt="Method overview diagram">
+        <figcaption>
+          <strong>Method Overview.</strong> Description of your pipeline or architecture. 
+          (a) First component, (b) Second component, (c) Final output.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ==================== RESULTS ==================== -->
+  <section class="results">
+    <div class="container-wide">
+      <h2 class="section-title">Results</h2>
+      <p>
+        Our method achieves state-of-the-art performance on [benchmark name]. 
+        Below we show qualitative results demonstrating [key capability].
+      </p>
+      
+      <!-- Result Cards Grid -->
+      <div class="results-grid">
+        <div class="result-card">
+          <video autoplay loop muted playsinline>
+            <source src="static/videos/result1.mp4" type="video/mp4">
+          </video>
+          <div class="caption">Task 1: Description</div>
+        </div>
+        
+        <div class="result-card">
+          <video autoplay loop muted playsinline>
+            <source src="static/videos/result2.mp4" type="video/mp4">
+          </video>
+          <div class="caption">Task 2: Description</div>
+        </div>
+        
+        <div class="result-card">
+          <video autoplay loop muted playsinline>
+            <source src="static/videos/result3.mp4" type="video/mp4">
+          </video>
+          <div class="caption">Task 3: Description</div>
+        </div>
+        
+        <div class="result-card">
+          <video autoplay loop muted playsinline>
+            <source src="static/videos/result4.mp4" type="video/mp4">
+          </video>
+          <div class="caption">Task 4: Description</div>
+        </div>
+      </div>
+      
+      <!-- Comparison Section -->
+      <div class="comparison-section">
+        <h3 class="comparison-header">Comparison with Baselines</h3>
+        
+        <div class="comparison-row">
+          <div class="comparison-item">
+            <video autoplay loop muted playsinline>
+              <source src="static/videos/baseline1.mp4" type="video/mp4">
+            </video>
+            <div class="label">Baseline 1</div>
+          </div>
+          <div class="comparison-item">
+            <video autoplay loop muted playsinline>
+              <source src="static/videos/baseline2.mp4" type="video/mp4">
+            </video>
+            <div class="label">Baseline 2</div>
+          </div>
+          <div class="comparison-item">
+            <video autoplay loop muted playsinline>
+              <source src="static/videos/baseline3.mp4" type="video/mp4">
+            </video>
+            <div class="label">Baseline 3</div>
+          </div>
+          <div class="comparison-item">
+            <video autoplay loop muted playsinline>
+              <source src="static/videos/ours.mp4" type="video/mp4">
+            </video>
+            <div class="label ours">Ours</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ADDITIONAL RESULTS (Optional) ==================== -->
+  <section class="additional-results">
+    <div class="container-wide">
+      <h2 class="section-title">Additional Experiments</h2>
+      <p class="mb-4">
+        We also evaluate our method on [additional benchmark/scenario]. 
+        These results demonstrate [key finding].
+      </p>
+      
+      <div class="results-grid">
+        <div class="result-card">
+          <img src="static/images/exp1.png" alt="Experiment 1">
+          <div class="caption">Experiment 1</div>
+        </div>
+        <div class="result-card">
+          <img src="static/images/exp2.png" alt="Experiment 2">
+          <div class="caption">Experiment 2</div>
+        </div>
+        <div class="result-card">
+          <img src="static/images/exp3.png" alt="Experiment 3">
+          <div class="caption">Experiment 3</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BIBTEX ==================== -->
+  <section class="bibtex-section">
+    <div class="container">
+      <h2 class="section-title">BibTeX</h2>
+      <div class="bibtex-box">
+        <button class="copy-btn" onclick="copyBibtex()">
+          <i class="fas fa-copy"></i> Copy
+        </button>
+        <pre>@inproceedings{authorname2025yourmethod,
+  title     = {Your Amazing Paper Title Goes Here: A Subtitle If You Have One},
+  author    = {Author, First and Author, Second and Author, Third and Author, Fourth},
+  booktitle = {Proceedings of Conference Name},
+  year      = {2025},
+}</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ACKNOWLEDGEMENTS (Optional) ==================== -->
+  <section class="acknowledgements">
+    <div class="container">
+      <h2 class="section-title">Acknowledgements</h2>
+      <p>
+        We thank [names] for helpful discussions. This work was supported by [funding sources].
+        First Author is supported by [fellowship/grant].
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <p>
+      Website template adapted from <a href="https://nerfies.github.io" target="_blank">Nerfies</a> 
+      and <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+    </p>
+  </footer>
+
+  <script>
+    function copyBibtex() {
+      const bibtex = document.querySelector('.bibtex-box pre').textContent;
+      navigator.clipboard.writeText(bibtex).then(() => {
+        const btn = document.querySelector('.copy-btn');
+        btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        setTimeout(() => {
+          btn.innerHTML = '<i class="fas fa-copy"></i> Copy';
+        }, 2000);
+      });
+    }
+
+    // Lazy load videos when they come into view
+    document.addEventListener('DOMContentLoaded', function() {
+      const videos = document.querySelectorAll('video');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.play();
+          } else {
+            entry.target.pause();
+          }
+        });
+      }, { threshold: 0.25 });
+      
+      videos.forEach(video => observer.observe(video));
+    });
+  </script>
+
+</body>
+</html>
